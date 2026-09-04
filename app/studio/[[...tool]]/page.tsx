@@ -7,18 +7,12 @@
  * https://github.com/sanity-io/next-sanity
  */
 
-// 1. Berikan alias 'nextDynamic' (atau nama lain) pada fungsi impor
-import nextDynamic from "next/dynamic";
+import { NextStudio } from "next-sanity/studio";
 import config from "../../../sanity.config";
 
 export const dynamic = "force-static";
-export { metadata, viewport } from "next-sanity/studio";
 
-// 2. Gunakan alias tersebut untuk membungkus komponen
-const NextStudio = nextDynamic(
-  () => import("next-sanity/studio").then((mod) => mod.NextStudio),
-  { ssr: false },
-);
+export { metadata, viewport } from "next-sanity/studio";
 
 export default function StudioPage() {
   return <NextStudio config={config} />;
