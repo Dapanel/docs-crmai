@@ -1,6 +1,6 @@
 ## Fumadocs Sanity
 
-This is an example for using Sanity with Fumadocs.
+This is an example for using Sanity with Fumadocs
 
 - Draft Mode (Live Preview)
 - Studio
